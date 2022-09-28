@@ -13,6 +13,11 @@ const connect = function () {
     conn.write("Name: VWV");
   });
 
+
+  // setInterval(fn = () => {
+  //   conn.write("Move: up");
+  // }, 50);
+
   process.stdin.on('connect', (userMessage) => {
     conn.write(userMessage, '\n');
   });
@@ -23,6 +28,7 @@ const connect = function () {
 
   return conn;
 };
+
 
 module.exports = {
   connect
